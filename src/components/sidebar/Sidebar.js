@@ -1,4 +1,9 @@
 import React, { useState } from "react";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import ContactPageIcon from "@mui/icons-material/ContactPage";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import Compartilhar from "../projetos/Compartilhar";
+import CompartilharCol from "../projetos/CompartilharCol";
 
 function Sidebar() {
   const [isCollapsed, setIsCollapsed] = useState(false);
@@ -7,35 +12,37 @@ function Sidebar() {
     setIsCollapsed(!isCollapsed);
   };
 
-  
   const menuOptions = [
-    { label: "Home", href: "#" },
-    { label: "Sobre", href: "#about" },
-    { label: "Projetos", href: "#projects" },
-    { label: "Contato", href: "#contact" },
+    { label: "Frameworks", title: "Frameworks" },
+    { label: "Responsivos", title: "Responsivos" },
+    { label: "Otimização", title: "Otimização" },
+    { label: "Navegação", title: "Navegação" },
+    { label: "Trabalho", title: "Trabalho" },
+    { label: "Experiência", title: "Experiência" },
+    { label: "Network", title: "Network" },
+    { label: "Deploy", title: "Deploy" },
   ];
 
   return (
     <div className="flex h-screen">
       <div
         className={`bg-escuro z-[900] text-limao transition-all duration-300 ${
-          isCollapsed ? "w-20" : "w-64"
-        } flex flex-col`}
+          isCollapsed ? "w-20" : "w-40"
+        } flex flex-col justify-center`}
       >
-
         <div className="p-4">
           <div className="text-center">
             {isCollapsed ? "JM" : "Jeanluiz Monteiro"}
           </div>
         </div>
         <div className="divider z-[1000]" />
-        <nav className="flex-grow">
-          <ul className="p-4 space-y-2">
+        <div className="h-full">
+          <ul className="p-4 space-y-2 md:space-y-3">
             {menuOptions.map((option, index) => (
               <li key={index}>
                 <a
-                  href={option.href}
-                  className={`block p-2 rounded hover:bg-limao hover:text-escuro transition-colors duration-300 ${
+                  title={option.title}
+                  className={`cursor-default block p-2 rounded hover:bg-limao hover:text-escuro transition-colors duration-300 ${
                     isCollapsed ? "text-center" : ""
                   }`}
                 >
@@ -44,7 +51,68 @@ function Sidebar() {
               </li>
             ))}
           </ul>
-        </nav>
+        </div>
+        <div className="divider z-[1000]" />
+        {isCollapsed ? (
+          <div
+            className={`p-4 space-y-4 md:space-y-8 pl-7 h-full transition-all duration-300 ${
+              isCollapsed ? "w-20" : "w-40"
+            }`}
+          >
+            <div className="" title="Ccontatos">
+              <ContactPageIcon />
+            </div>
+
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+                title="Whats App"
+              >
+                <WhatsAppIcon />
+              </a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
+                title="Linked-In"
+              >
+                <LinkedInIcon />
+              </a>
+            </div>
+          </div>
+        ) : (
+          <div
+            className={`p-4 space-y-4 pl-6 h-full transition-all duration-300 ${
+              isCollapsed ? "w-20" : "w-40"
+            }`}
+          >
+            <div className="cursor-default">Contatos</div>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+              >
+                Whats App
+              </a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
+              >
+                Linked-In
+              </a>
+            </div>
+          </div>
+        )}
+        <div className="divider z-[1000]" />
+        {isCollapsed ? <CompartilharCol /> : <Compartilhar />}
 
         <button
           onClick={toggleSidebar}
