@@ -46,14 +46,14 @@ const projetos = [
   },
 ];
 
-function Projetos() {
+function ProjetosMD() {
   return (
-    <div className="relative flex flex-col justify-around h-full gap-1 w-full">
-      <div className=" h-full w-full rounded-md p-2 py-3 flex flex-col md:flex-row justify-evenly">
-        {projetos.slice(0, 3).map((projeto, index) => (
+    <div className="relative flex flex-col justify-start h-full gap-1 w-full">
+      <div className="h-full max-h-[50%] w-full rounded-md p-2 py-3 flex flex-wrap justify-evenly top-0">
+        {projetos.map((projeto, index) => (
           <div
             key={index}
-            className="flex flex-col items-center w-full h-full bg-white rounded m-1"
+            className="flex flex-col items-center basis-6  md:basis-4 xl:basis-3 h-full bg-white rounded m-1"
           >
             <div className="px-3 p-2 flex flex-col items-center">
               <div className="bg-cinza rounded-md w-[400px] h-[230px] border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
@@ -79,37 +79,8 @@ function Projetos() {
           </div>
         ))}
       </div>
-      <div className=" h-full w-full rounded-md p-2 py-3 flex flex-col md:flex-row justify-evenly">
-        {projetos.slice(3, 6).map((projeto, index) => (
-          <div
-            key={index}
-            className="flex flex-col items-center w-full h-full bg-white rounded m-1"
-          >
-            <div className="px-3 p-2  flex flex-col items-center">
-              <div className="bg-cinza rounded-md w-[400px] h-[230px] border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
-                <img
-                  src={projeto.imagem}
-                  alt={projeto.nome}
-                  className="w-full h-full object-fill  mb-2"
-                />
-              </div>
-              <a
-                href={projeto.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xl font-semibold text-limao bg-escuro rounded px-4 hover:underline"
-              >
-                {projeto.nome}
-              </a>
-              <h2 className="text-escuro text-justify mt-2 p-2 rounded bg-slate-200 text-sm">
-                {projeto.descricao}
-              </h2>
-            </div>
-          </div>
-        ))}
-      </div>
     </div>
   );
 }
 
-export default Projetos;
+export default ProjetosMD;
