@@ -16,7 +16,7 @@ const Compartilhar = () => {
 
   return (
     <div className="h-full rounded overflow-hidden shadow-lg p-6 pt-2">
-      <h2 className=" cursor-default pb-4">Compartilhe</h2>
+      <h2 className=" cursor-default pb-4 underline text-lg">Compartilhe</h2>
       <div className="flex  -pl-1 left-0 justify-evenly space-x-2">
         <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer">
           <FacebookIcon className="text-blue-600 hover:text-blue-800 text-3xl" />

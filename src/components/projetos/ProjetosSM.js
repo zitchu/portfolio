@@ -8,32 +8,54 @@ const projetos = [
   {
     nome: "Calculadora de Hamburger",
     imagem: calculadora,
-    link: "https://exemplo.com/projeto1",
-  },
-  {
-    nome: "Santo Aroma",
-    imagem: santoaroma,
-    link: "https://exemplo.com/projeto2",
+    link: "https://calculadorahamburger.netlify.app/",
+    descricao:
+      "Não responsivo. Meu primeiro site completo e por isso resolvi deixar o código sem atualização para ter sempre a referência de como evolui no desenvolvimento de futuros projetos em vista desse.",
   },
   {
     nome: "Carta para Rosiel",
     imagem: carta,
-    link: "https://exemplo.com/projeto3",
+    link: "https://rosielcarta.netlify.app/",
+    descricao:
+      "Não responsivo. 'Puzzle' criado para utilização em jogo de RPG com amigos utilizando ferramentas de javascript. 4 mensagens sendo uma a que está claramente em tela e outras 3 a serem descobertas pelos jogadores durante a partida",
+  },
+  {
+    nome: "Santo Aroma",
+    imagem: santoaroma,
+    link: "https://santoaroma.netlify.app/",
+    descricao: "sorte",
   },
   {
     nome: "Tarôt",
     imagem: breve,
     link: "https://exemplo.com/projeto4",
+    descricao: "sorte",
   },
   {
     nome: "Treino",
     imagem: breve,
     link: "https://exemplo.com/projeto5",
+    descricao:
+      "Não responsivo. 'Puzzle' criado para utilização em jogo de RPG com amigos utilizando ferramentas de javascript. 4 mensagens sendo uma a que está claramente em tela e outras 3 a serem descobertas pelos jogadores durante a partida",
   },
   {
     nome: "Em Breve",
     imagem: breve,
     link: "https://exemplo.com/projeto6",
+    descricao: "sorte",
+  },
+  {
+    nome: "Treino",
+    imagem: breve,
+    link: "https://exemplo.com/projeto5",
+    descricao:
+      "Não responsivo. 'Puzzle' criado para utilização em jogo de RPG com amigos utilizando ferramentas de javascript. 4 mensagens sendo uma a que está claramente em tela e outras 3 a serem descobertas pelos jogadores durante a partida",
+  },
+  {
+    nome: "Em Breve",
+    imagem: breve,
+    link: "https://exemplo.com/projeto6",
+    descricao: "sorte",
   },
 ];
 

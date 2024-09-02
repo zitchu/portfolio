@@ -1,17 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Compartilhar from "../projetos/Compartilhar";
 import CompartilharCol from "../projetos/CompartilharCol";
 
-function Sidebar() {
-  const [isCollapsed, setIsCollapsed] = useState(false);
-
-  const toggleSidebar = () => {
-    setIsCollapsed(!isCollapsed);
-  };
-
+function Sidebar({ isCollapsed, toggleSidebar }) {
   const menuOptions = [
     { label: "Frameworks", title: "Frameworks" },
     { label: "Responsivos", title: "Responsivos" },
@@ -24,7 +18,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="flex h-screen">
+    <div className="flex top-0 left-0 fixed h-full">
       <div
         className={`bg-escuro z-[900] text-limao transition-all duration-300 ${
           isCollapsed ? "w-20" : "w-40"
@@ -59,7 +53,7 @@ function Sidebar() {
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
-            <div className="" title="Ccontatos">
+            <div className="" title="Contatos">
               <ContactPageIcon />
             </div>
 
@@ -90,7 +84,7 @@ function Sidebar() {
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
-            <div className="cursor-default">Contatos</div>
+            <div className="cursor-default text-lg underline">Contatos</div>
             <div>
               <a
                 target="_blank"
