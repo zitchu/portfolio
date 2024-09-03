@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -6,6 +6,22 @@ import Compartilhar from "../projetos/Compartilhar";
 import CompartilharCol from "../projetos/CompartilharCol";
 
 function Sidebar({ isCollapsed, toggleSidebar }) {
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+
+  // Atualiza o estado com a altura atual da janela
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const minHeight = 900;
+
   const menuOptions = [
     { label: "Frameworks", title: "Frameworks" },
     { label: "Responsivos", title: "Responsivos" },
@@ -30,22 +46,26 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
           </div>
         </div>
         <div className="divider z-[1000]" />
-        <div className="h-full">
-          <ul className="p-4 space-y-2 md:space-y-3">
-            {menuOptions.map((option, index) => (
-              <li key={index}>
-                <a
-                  title={option.title}
-                  className={`cursor-default block p-2 rounded hover:bg-limao hover:text-escuro transition-colors duration-300 ${
-                    isCollapsed ? "text-center" : ""
-                  }`}
-                >
-                  {isCollapsed ? option.label[0] : option.label}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
+
+        {windowHeight >= minHeight && (
+          <div className="h-full">
+            <ul className="p-4 space-y-2 md:space-y-3">
+              {menuOptions.map((option, index) => (
+                <li key={index}>
+                  <a
+                    title={option.title}
+                    className={`cursor-default block p-2 rounded hover:bg-limao hover:text-escuro transition-colors duration-300 ${
+                      isCollapsed ? "text-center" : ""
+                    }`}
+                  >
+                    {isCollapsed ? option.label[0] : option.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
         <div className="divider z-[1000]" />
         {isCollapsed ? (
           <div
@@ -56,7 +76,6 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             <div className="" title="Contatos">
               <ContactPageIcon />
             </div>
-
             <div>
               <a
                 target="_blank"
@@ -105,6 +124,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             </div>
           </div>
         )}
+
         <div className="divider z-[1000]" />
         {isCollapsed ? <CompartilharCol /> : <Compartilhar />}
 

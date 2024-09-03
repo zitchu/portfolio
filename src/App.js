@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ProjetosSM from "./components/projetos/ProjetosSM";
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <div className="w-full h-full">
-      <motion.div className="relative flex flex-row justify-end items-center h-full ">
+      <div className="relative flex flex-row justify-end items-center h-full ">
         <div className="relative hidden md:block left-0 z-[1000] bg-escuro">
           <Sidebar
             isCollapsed={isCollapsed}
@@ -36,7 +35,7 @@ function App() {
             <ProjetosSM />
           </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }

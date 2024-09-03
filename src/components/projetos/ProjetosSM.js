@@ -110,28 +110,30 @@ function ProjetosSM() {
         ))}
       </div>
       <div className="p-4 h-full transition-all duration-300 flex flex-col justify-center items-center bg-escuro text-white w-full rounded text-limao">
-        <div className="cursor-default uppercase text-xl text-center mont-regular">
+        <div className="cursor-default  uppercase text-xl text-center mont-regular">
           Contatos
         </div>
-        <div>
-          <a
-          className="hover:bg-[#848c8c] rounded px-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
-          >
-            Whats App
-          </a>
-        </div>
-        <div>
-          <a
-          className="hover:bg-[#848c8c] rounded px-2"
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
-          >
-            Linked-In
-          </a>
+        <div className="flex flex-nowrap w-full justify-around items-center">
+          <div className="py-2">
+            <a
+              className="hover:bg-[#848c8c] rounded px-2 "
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+            >
+              Whats App
+            </a>
+          </div>
+          <div className="py-2">
+            <a
+              className="hover:bg-[#848c8c] rounded px-2 "
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
+            >
+              Linked-In
+            </a>
+          </div>
         </div>
       </div>
       <div className="bottom-0 left-0 flex justify-center bg-escuro text-white w-full rounded text-limao">
