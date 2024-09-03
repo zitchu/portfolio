@@ -1,4 +1,3 @@
-
 .text-verde {
   color: #3aca07;
 }
@@ -49,4 +48,35 @@
   height: 1px;
   width: 90%;
   margin: auto;
+}
+
+.impact {
+  font-family: "Impact", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 1.5px;
+}
+
+.mont-regular {
+  font-family: "Montserrat Subrayada", "Impact", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mont-bold {
+  font-family: "Montserrat Subrayada", "Impact", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.roboto-light {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.roboto-med {
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }

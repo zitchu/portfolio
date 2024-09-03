@@ -18,7 +18,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
   ];
 
   return (
-    <div className="flex top-0 left-0 fixed h-full">
+    <div className="flex top-0 left-0 fixed h-full roboto-med">
       <div
         className={`bg-escuro z-[900] text-limao transition-all duration-300 ${
           isCollapsed ? "w-20" : "w-40"

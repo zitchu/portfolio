@@ -70,7 +70,7 @@ function ProjetosMD() {
   };
 
   return (
-    <div className="relative flex flex-col justify-start h-full gap-1 w-full">
+    <div className="relative flex flex-col justify-start h-full gap-1 w-full roboto-light">
       <div className="h-full max-h-[50%] w-full rounded-md p-2 py-3 flex flex-wrap justify-evenly top-0">
         {projetos.map((projeto, index) => (
           <div
@@ -83,7 +83,7 @@ function ProjetosMD() {
                   src={projeto.imagem}
                   onClick={() => window.open(projeto.link, "_blank")}
                   alt={projeto.nome}
-                  className="w-full h-full object-cover mb-2"
+                  className="w-full h-full object-cover overflow mb-2"
                 />
               </div>
 
