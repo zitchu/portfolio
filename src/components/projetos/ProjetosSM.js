@@ -74,10 +74,10 @@ function ProjetosSM() {
 
   return (
     <div className="relative flex flex-col justify-around h-full gap-1 w-full roboto-light">
-      <div className="bg-white h-1/12 w-full rounded-md px-4 py-2 flex justify-center">
+      <div className=" h-1/12 w-full rounded-md px-4 py-2 flex justify-center">
         <div className="text-2xl text-verdao mont-bold">Projetos Jeanluiz</div>
       </div>
-      <div className="bg-slate-100 h-full w-full rounded-md px-4 py-2 flex flex-col md:flex-row justify-evenly">
+      <div className=" h-full w-full rounded-md  py-2 flex flex-col md:flex-row justify-evenly">
         {projetos.map((projeto, index) => (
           <div key={index} className="flex flex-col items-center w-full h-full">
             <div className="bg-cinza  rounded-md border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
@@ -108,6 +108,52 @@ function ProjetosSM() {
             </Modalidade>
           </div>
         ))}
+      </div>
+      <div className="p-4 h-full transition-all duration-300 flex flex-col justify-center items-center bg-escuro text-white w-full rounded text-limao">
+        <div className="cursor-default  uppercase text-xl text-center mont-regular">
+          Currículo
+        </div>
+        <div className="flex flex-nowrap w-full justify-around items-center">
+          <div className="py-2">
+            <a
+              className="hover:bg-[#848c8c] rounded px-2 "
+              href="/Jeanluiz_CV_BRA_2025.pdf"
+              download="Jeanluiz_CV_BRA_2025.pdf"
+              title="Currículo em Português"
+              onClick={(e) => {
+                if (
+                  !window.confirm(
+                    "Você deseja baixar o currículo em português?"
+                  )
+                ) {
+                  e.preventDefault(); 
+                }
+              }}
+            >
+              Baixar em português
+            </a>
+          </div>
+
+          <div className="py-2">
+            <a
+              className="hover:bg-[#848c8c] rounded px-2 "
+              href="/Jeanluiz_CV_ENG_2025.pdf"
+              download="Jeanluiz_CV_ENG_2025.pdf"
+              title="English Resume"
+              onClick={(e) => {
+                if (
+                  !window.confirm(
+                    "Do you want to download the resume in English?"
+                  )
+                ) {
+                  e.preventDefault(); 
+                }
+              }}
+            >
+              Download in English
+            </a>
+          </div>
+        </div>
       </div>
       <div className="p-4 h-full transition-all duration-300 flex flex-col justify-center items-center bg-escuro text-white w-full rounded text-limao">
         <div className="cursor-default  uppercase text-xl text-center mont-regular">

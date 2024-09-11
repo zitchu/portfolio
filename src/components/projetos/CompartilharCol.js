@@ -17,9 +17,9 @@ const CompartilharCol = () => {
 
   return (
     <div className="h-full rounded overflow-hidden shadow-lg px-7 pt-2">
-      <h2 title="Compartilhar" className=" font-semibold pb-2">
+      <div title="Compartilhar" className="bg-cinza rounded text-white font-semibold mb-2">
         <ShareIcon />
-      </h2>
+      </div>
       <div className="flex flex-col -pl-1 left-0 justify-evenly space-y-2">
         <a
           href={shareLinks.facebook}

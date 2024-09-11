@@ -75,10 +75,10 @@ function ProjetosMD() {
         {projetos.map((projeto, index) => (
           <div
             key={index}
-            className="flex flex-col items-center basis-6 md:basis-4 xl:basis-3 h-full bg-white rounded m-1"
+            className="flex flex-col items-center basis-6 md:basis-4 xl:basis-3 h-full  rounded m-1"
           >
             <div className="px-3 p-2 flex flex-col items-center">
-              <div className="bg-cinza rounded-md w-[27vw] aspect-video border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
+              <div className=" rounded-md w-[27vw] aspect-video border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
                 <img
                   src={projeto.imagem}
                   onClick={() => window.open(projeto.link, "_blank")}
