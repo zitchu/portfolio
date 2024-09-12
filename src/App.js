@@ -13,7 +13,7 @@ function App() {
 
   return (
     <div className="w-full h-full">
-      <div className="relative flex flex-row justify-end items-center h-full bg-slate-100">
+      <div className="relative flex flex-row justify-end items-center h-full bg-cinza">
         <div className="relative hidden md:block left-0 z-[1000] bg-escuro">
           <Sidebar
             isCollapsed={isCollapsed}

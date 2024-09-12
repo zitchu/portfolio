@@ -16,66 +16,67 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         } flex flex-col justify-center`}
       >
         <div className="p-4">
-          <div className="text-center">
+          <div className="text-center mont-regular">
             {isCollapsed ? "JM" : "Jeanluiz Monteiro"}
           </div>
         </div>
         <div className="divider z-[1000]" />
 
         {isCollapsed ? (
-          <div className="h-auto flex flex-col">
+          <div className="h-auto flex flex-col space-y-4 mb-4">
             <div
               title="Download CV"
-              className=" text-center text-white px-7 pt-2"
+              className=" text-center text-white px-7 pt-4"
             >
               <FileDownloadIcon className="bg-cinza rounded mb-2" />
             </div>
-            <div className="bg-gradient-to-r from-green-700 to-yellow-500 mx-7 p-1 rounded">
+            <div className="h-6 bg-gradient-to-r from-green-700 to-yellow-500 mx-7 p-1 rounded">
               <GiBrazilFlag className="  text-white text-center" />
+              <a
+                href="/Jeanluiz_CV_BRA_2025.pdf"
+                download="Jeanluiz_CV_BRA_2025.pdf"
+                className="p-4 pl-7 "
+                title="Currículo em Português"
+                onClick={(e) => {
+                  if (
+                    !window.confirm(
+                      "Você deseja baixar o currículo em português?"
+                    )
+                  ) {
+                    e.preventDefault();
+                  }
+                }}
+              />
             </div>
-            <a
-              href="/Jeanluiz_CV_BRA_2025.pdf"
-              download="Jeanluiz_CV_BRA_2025.pdf"
-              className="p-4 pl-7 "
-              title="Currículo em Português"
-              onClick={(e) => {
-                if (
-                  !window.confirm(
-                    "Você deseja baixar o currículo em português?"
-                  )
-                ) {
-                  e.preventDefault();
-                }
-              }}
-            >
-              BR-CV
-            </a>
-            <div className="bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded">
+
+            <div className="h-6 bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded">
               <GiUsaFlag className="  text-white text-center" />
+              <a
+                href="/Jeanluiz_CV_ENG_2025.pdf"
+                download="Jeanluiz_CV_ENG_2025.pdf"
+                className="p-4 pl-7 "
+                title="English Resume"
+                onClick={(e) => {
+                  if (
+                    !window.confirm(
+                      "Do you want to download the resume in English?"
+                    )
+                  ) {
+                    e.preventDefault();
+                  }
+                }}
+              />
             </div>
-            <a
-              href="/Jeanluiz_CV_ENG_2025.pdf"
-              download="Jeanluiz_CV_ENG_2025.pdf"
-              className="p-4 pl-7 "
-              title="English Resume"
-              onClick={(e) => {
-                if (
-                  !window.confirm(
-                    "Do you want to download the resume in English?"
-                  )
-                ) {
-                  e.preventDefault();
-                }
-              }}
-            >
-              EN-CV
-            </a>
           </div>
         ) : (
           <div className="h-full flex flex-col">
-            <div className="cursor-default text-lg underline p-4 pl-6">
+            <div className="cursor-default text-md  p-4 pl-6 mont-regular">
               Currículo
             </div>
+            <div className="w-[25%] bg-gradient-to-r  from-green-700 to-yellow-500 mx-7 p-1 rounded">
+              <GiBrazilFlag className=" text-white text-center transform transition-transform duration-300 ease-in-out hover:translate-x-full" />
+            </div>
+
             <a
               href="/Jeanluiz_CV_BRA_2025.pdf"
               download="Jeanluiz_CV_BRA_2025.pdf"
@@ -83,6 +84,9 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             >
               Versão em português
             </a>
+            <div className="w-[25%] bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded">
+              <GiUsaFlag className="  text-white text-center transform transition-transform duration-300 ease-in-out hover:translate-x-full" />
+            </div>
             <a
               href="/Jeanluiz_CV_ENG_2025.pdf"
               download="Jeanluiz_CV_ENG_2025.pdf"
@@ -96,7 +100,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         <div className="divider z-[1000]" />
         {isCollapsed ? (
           <div
-            className={`p-4 space-y-4 md:space-y-8 px-7 h-auto transition-all duration-300 ${
+            className={`p-4  space-y-4 md:space-y-8 px-7 h-auto transition-all duration-300 ${
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
@@ -133,7 +137,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
-            <div className="cursor-default text-lg underline">Contatos</div>
+            <div className="cursor-default text-md mont-regular">Contatos</div>
             <div>
               <a
                 target="_blank"

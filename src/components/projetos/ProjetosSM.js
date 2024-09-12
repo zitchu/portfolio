@@ -80,7 +80,7 @@ function ProjetosSM() {
       <div className=" h-full w-full rounded-md  py-2 flex flex-col md:flex-row justify-evenly">
         {projetos.map((projeto, index) => (
           <div key={index} className="flex flex-col items-center w-full h-full">
-            <div className="bg-cinza  rounded-md border-4 hover:border-[#3aca07] border-[#c3ec21] hover:scale-105 transition duration-500 shadow-md my-2">
+            <div className="bg-cinza  rounded-md border-4 hover:border-[#3b8a6b] border-[#01c38d] hover:scale-105 transition duration-500 shadow-md my-2">
               <button
                 onClick={() => handleOpenModal(projeto.descricao, projeto.link)}
                 className="text-xl w-full justify-center items-center flex  font-semibold text-white bg-verde rounded-b  roboto-med"

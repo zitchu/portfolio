@@ -16,8 +16,11 @@ const CompartilharCol = () => {
   };
 
   return (
-    <div className="h-full rounded overflow-hidden shadow-lg px-7 pt-2">
-      <div title="Compartilhar" className="bg-cinza rounded text-white font-semibold mb-2">
+    <div className="h-full rounded overflow-hidden shadow-lg px-7 pt-4">
+      <div
+        title="Compartilhar"
+        className="bg-cinza rounded text-white font-semibold mb-2"
+      >
         <ShareIcon />
       </div>
       <div className="flex flex-col -pl-1 left-0 justify-evenly space-y-2">
@@ -27,7 +30,7 @@ const CompartilharCol = () => {
           rel="noopener noreferrer"
           title="Compartilhar Facebook"
         >
-          <FacebookIcon className="text-blue-600 hover:text-blue-800 text-3xl" />
+          <FacebookIcon className="text-blue-600 hover:text-white text-3xl" />
         </a>
         <a
           href={shareLinks.twitter}
@@ -43,7 +46,7 @@ const CompartilharCol = () => {
           rel="noopener noreferrer"
           title="Compartilhar Linked In"
         >
-          <LinkedInIcon className="text-blue-700 hover:text-blue-900 text-3xl" />
+          <LinkedInIcon className="text-blue-700 hover:text-white text-3xl" />
         </a>
         <a
           href={shareLinks.whatsapp}
@@ -51,7 +54,7 @@ const CompartilharCol = () => {
           rel="noopener noreferrer"
           title="Compartilhar Whats App"
         >
-          <WhatsAppIcon className="text-green-500 hover:text-green-700 text-3xl" />
+          <WhatsAppIcon className="text-green-500 hover:text-white text-3xl" />
         </a>
       </div>
     </div>
