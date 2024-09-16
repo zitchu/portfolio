@@ -16,14 +16,14 @@ const CompartilharCol = () => {
   };
 
   return (
-    <div className="h-full rounded overflow-hidden shadow-lg px-7 pt-4">
+    <div className="h-full rounded overflow-hidden shadow-lg px-7 pt-4 space-y-4 md:space-y-6">
       <div
         title="Compartilhar"
         className="bg-cinza rounded text-white font-semibold mb-2"
       >
         <ShareIcon />
       </div>
-      <div className="flex flex-col -pl-1 left-0 justify-evenly space-y-2">
+      <div className="flex flex-col -pl-1 left-0 justify-evenly space-y-4 md:space-y-6">
         <a
           href={shareLinks.facebook}
           target="_blank"

@@ -3,6 +3,7 @@ import carta from "../img/carta.png";
 import calculadora from "../img/calculadora.png";
 import santoaroma from "../img/santoaroma.png";
 import breve from "../img/breve.png";
+import parallax from "../img/parallax.png";
 import CompartilharSM from "./CompartilharSM";
 import Modalidade from "../modal/Modalidade";
 
@@ -25,7 +26,8 @@ const projetos = [
     nome: "Santo Aroma",
     imagem: santoaroma,
     link: "https://santoaroma.netlify.app/",
-    descricao: "sorte",
+    descricao:
+      "Responsivo. Site institucional para a página Santo Aroma Bsb criado com conceitos simples de parallax",
   },
   {
     nome: "Tarôt",
@@ -34,8 +36,8 @@ const projetos = [
     descricao: "sorte",
   },
   {
-    nome: "Treino",
-    imagem: breve,
+    nome: "Parallax",
+    imagem: parallax,
     link: "https://exemplo.com/projeto5",
     descricao:
       "Não responsivo. 'Puzzle' criado para utilização em jogo de RPG com amigos utilizando ferramentas de javascript. 4 mensagens sendo uma a que está claramente em tela e outras 3 a serem descobertas pelos jogadores durante a partida",
@@ -126,7 +128,7 @@ function ProjetosSM() {
                     "Você deseja baixar o currículo em português?"
                   )
                 ) {
-                  e.preventDefault(); 
+                  e.preventDefault();
                 }
               }}
             >
@@ -146,7 +148,7 @@ function ProjetosSM() {
                     "Do you want to download the resume in English?"
                   )
                 ) {
-                  e.preventDefault(); 
+                  e.preventDefault();
                 }
               }}
             >
@@ -168,6 +170,17 @@ function ProjetosSM() {
               href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
             >
               Whats App
+            </a>
+          </div>
+          <div className="py-2">
+            <a
+              className="hover:bg-[#848c8c] rounded px-2 "
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://github.com/zitchu"
+              title="GitHub"
+            >
+              GitHub
             </a>
           </div>
           <div className="py-2">

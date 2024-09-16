@@ -4,6 +4,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Compartilhar from "../projetos/Compartilhar";
 import CompartilharCol from "../projetos/CompartilharCol";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
+import GitHubIcon from '@mui/icons-material/GitHub';
 import { GiUsaFlag } from "react-icons/gi";
 import { GiBrazilFlag } from "react-icons/gi";
 
@@ -23,7 +24,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         <div className="divider z-[1000]" />
 
         {isCollapsed ? (
-          <div className="h-auto flex flex-col space-y-4 mb-4">
+          <div className="h-auto flex flex-col space-y-4 md:space-y-6 mb-4">
             <div
               title="Download CV"
               className=" text-center text-white px-7 pt-4"
@@ -69,7 +70,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             </div>
           </div>
         ) : (
-          <div className="h-full flex flex-col">
+          <div className="h-auto flex flex-col ">
             <div className="cursor-default text-md  p-4 pl-6 mont-regular">
               Currículo
             </div>
@@ -100,7 +101,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         <div className="divider z-[1000]" />
         {isCollapsed ? (
           <div
-            className={`p-4  space-y-4 md:space-y-8 px-7 h-auto transition-all duration-300 ${
+            className={`p-4  space-y-4 md:space-y-6 px-7 h-auto transition-all duration-300 ${
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
@@ -124,6 +125,16 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
+                href="https://github.com/zitchu"
+                title="GitHub"
+              >
+                <GitHubIcon />
+              </a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
                 title="Linked-In"
               >
@@ -133,7 +144,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
           </div>
         ) : (
           <div
-            className={`p-4 space-y-4 pl-6 h-full transition-all duration-300 ${
+            className={`p-4 space-y-4 md:space-y-6 pl-6 h-auto transition-all duration-300 ${
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
@@ -145,6 +156,16 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                 href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
               >
                 Whats App
+              </a>
+            </div>
+            <div>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/zitchu"
+                title="GitHub"
+              >
+                GitHub
               </a>
             </div>
             <div>
