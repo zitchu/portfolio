@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import carta from "../img/carta.png";
 import calculadora from "../img/calculadora.png";
 import santoaroma from "../img/santoaroma.png";
+import transition from "../img/transition.png";
 import breve from "../img/breve.png";
 import parallax from "../img/parallax.png";
 import CompartilharSM from "./CompartilharSM";
@@ -30,26 +31,27 @@ const projetos = [
       "Responsivo. Site institucional para a página Santo Aroma Bsb criado com conceitos simples de parallax",
   },
   {
+    nome: "Parallax",
+    imagem: parallax,
+    link: "https://jmparallax.netlify.app/",
+    descricao:
+      "Responsivo mas melhor aproveitado em telas maiores. Site feito com parallax em diversas técnicas para exemplificação e 'case' ",
+  },
+  {
+    nome: "Dualidade Files",
+    imagem: transition,
+    link: "https://dualidadefiles.netlify.app/",
+    descricao:
+      "Não Responsivo. Feito para criar uma animação para rpg utilizando recursos parallax",
+  },
+  {
     nome: "Tarôt",
     imagem: breve,
     link: "https://exemplo.com/projeto4",
     descricao: "sorte",
   },
   {
-    nome: "Parallax",
-    imagem: parallax,
-    link: "https://exemplo.com/projeto5",
-    descricao:
-      "Não responsivo. 'Puzzle' criado para utilização em jogo de RPG com amigos utilizando ferramentas de javascript. 4 mensagens sendo uma a que está claramente em tela e outras 3 a serem descobertas pelos jogadores durante a partida",
-  },
-  {
     nome: "Em Breve",
-    imagem: breve,
-    link: "https://exemplo.com/projeto6",
-    descricao: "sorte",
-  },
-  {
-    nome: "Treino",
     imagem: breve,
     link: "https://exemplo.com/projeto5",
     descricao:

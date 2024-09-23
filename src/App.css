@@ -50,6 +50,13 @@
   margin: auto;
 }
 
+.divider-h {
+  background-color: white;
+  widht: 1px;
+  height: 90%;
+  margin: auto;
+}
+
 .impact {
   font-family: "Impact", sans-serif;
   font-weight: 400;
