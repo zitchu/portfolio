@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ProjetosSM from "./components/projetos/ProjetosSM";
@@ -6,10 +6,28 @@ import ProjetosMD from "./components/projetos/ProjetosMD";
 
 function App() {
   const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isMdLayout, setIsMdLayout] = useState(true);
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      const { innerWidth: width, innerHeight: height } = window;
+
+      if (width < 768 || height < 720) {
+        setIsMdLayout(false);
+      } else {
+        setIsMdLayout(true);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="w-full h-full">
@@ -21,20 +39,24 @@ function App() {
             setIsCollapsed={setIsCollapsed}
           />
         </div>
-        <div
-          className={`relative hidden md:flex flex-col  transition-all duration-300 ${
-            isCollapsed ? "w-[calc(100%-5rem)]" : "w-[calc(100%-10rem)]"
-          } h-full  p-4 ml-20`}
-        >
-          <div className="bg-white w-full h-full items-center flex justify-center p-4 rounded-md shadow-md">
-            <ProjetosMD />
+
+        {isMdLayout ? (
+          <div
+            className={`relative flex flex-col transition-all duration-300 ${
+              isCollapsed ? "w-[calc(100%-5rem)]" : "w-[calc(100%-10rem)]"
+            } h-full p-4 ml-20`}
+          >
+            <div className="bg-white w-full h-full items-center flex justify-center p-4 rounded-md shadow-md">
+              <ProjetosMD />
+            </div>
           </div>
-        </div>
-        <div className="relative flex md:hidden flex-col w-full h-full  p-4">
-          <div className="bg-white w-full h-full items-center flex justify-center p-4 rounded-md shadow-md">
-            <ProjetosSM />
+        ) : (
+          <div className="relative flex w-full h-full p-4">
+            <div className="bg-white w-full h-full items-center flex justify-center p-4 rounded-md shadow-md">
+              <ProjetosSM />
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

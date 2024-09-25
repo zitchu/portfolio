@@ -81,9 +81,9 @@ function ProjetosSM() {
       <div className=" h-1/12 w-full rounded-md px-4 py-2 flex justify-center">
         <div className="text-2xl text-verdao mont-bold">Projetos Jeanluiz</div>
       </div>
-      <div className=" h-full w-full rounded-md  py-2 flex flex-col md:flex-row justify-evenly">
+      <div className=" h-full w-full rounded-md py-2 flex flex-col md:block md:flex-row justify-evenly">
         {projetos.map((projeto, index) => (
-          <div key={index} className="flex flex-col items-center w-full h-full">
+          <div key={index} className="flex flex-row  items-center w-full h-full">
             <div className="bg-cinza  rounded-md border-4 hover:border-[#3b8a6b] border-[#01c38d] hover:scale-105 transition duration-500 shadow-md my-2">
               <button
                 onClick={() => handleOpenModal(projeto.descricao, projeto.link)}

@@ -1,6 +1,6 @@
 import React from "react";
 import FacebookIcon from "@mui/icons-material/Facebook";
-import XIcon from '@mui/icons-material/X';
+import XIcon from "@mui/icons-material/X";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 
@@ -16,7 +16,9 @@ const CompartilharSM = () => {
 
   return (
     <div className="h-full w-full rounded overflow-hidden shadow-lg p-6 pt-2">
-      <h2 className=" cursor-default pb-4 uppercase text-xl text-center mont-regular">Compartilhe</h2>
+      <h2 className=" cursor-default pb-4 uppercase text-xl text-center mont-regular">
+        Compartilhe
+      </h2>
       <div className="flex  pl-1 left-0 justify-around ">
         <a href={shareLinks.facebook} target="_blank" rel="noopener noreferrer">
           <FacebookIcon className="hover:bg-[#848c8c] h-20 w-20 rounded  text-blue-600 hover:text-white text-3xl" />
