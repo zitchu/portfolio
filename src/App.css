@@ -1,47 +1,4 @@
-.text-verde {
-  color: #3b8a6b;
-}
 
-.bg-verde {
-  background-color: #3b8a6b;
-}
-
-.text-limao {
-  color: #01c38d;
-}
-
-.bg-limao {
-  background-color: #01c38d;
-}
-
-.text-verdao {
-  color: #132d46;
-}
-
-.bg-verdao {
-  background-color: #132d46;
-}
-
-.text-cinza {
-  color: #696e79;
-}
-
-.bg-cinza {
-  background-color: #696e79;
-}
-
-.text-escuro {
-  color: #191e29;
-}
-
-.bg-escuro {
-  background-color: #191e29;
-}
-
-.text-xs {
-  font-size: 0.7rem;
-  line-height: 1rem;
-}
 
 .divider {
   background-color: white;
@@ -52,7 +9,7 @@
 
 .divider-h {
   background-color: white;
-  widht: 1px;
+  width: 1px;
   height: 90%;
   margin: auto;
 }

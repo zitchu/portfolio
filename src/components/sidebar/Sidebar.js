@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
@@ -9,28 +9,13 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import { GiUsaFlag, GiBrazilFlag } from "react-icons/gi";
 
 function Sidebar({ isCollapsed, toggleSidebar }) {
-  const [isVisible, setIsVisible] = useState(true);
-
-  useEffect(() => {
-    const handleResize = () => {
-      const { innerHeight: height } = window;
-      setIsVisible(height >= 720);
-    };
-
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
-  if (!isVisible) return null;
-
+  
   return (
-    <div className="flex top-0 left-0 fixed h-full roboto-med">
+    <div className="fixed top-0 left-0 h-screen hidden md:flex roboto-med z-[1000]">
       <div
-        className={`bg-escuro z-[900] text-limao transition-all duration-300 ${
+        className={`bg-escuro text-limao transition-all duration-500 ease-in-out ${
           isCollapsed ? "w-20" : "w-40"
-        } flex flex-col justify-center`}
+        } flex flex-col justify-center h-full`}
       >
         <div className="p-4">
           <div className="text-center mont-regular">
@@ -47,12 +32,12 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             >
               <FileDownloadIcon className="bg-cinza rounded mb-2" />
             </div>
-            <div className="h-6 bg-gradient-to-r from-green-700 to-yellow-500 mx-7 p-1 rounded">
+            <div className="h-6 bg-gradient-to-r from-green-700 to-yellow-500 mx-7 p-1 rounded cursor-pointer hover:opacity-80 transition-opacity">
               <GiBrazilFlag className="  text-white text-center" />
               <a
                 href="/Jeanluiz_CV_BRA_2025.pdf"
                 download="Jeanluiz_CV_BRA_2025.pdf"
-                className="p-4 pl-7 "
+                className="p-4 pl-7 block w-full h-full"
                 title="Currículo em Português"
                 onClick={(e) => {
                   if (
@@ -66,12 +51,12 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
               />
             </div>
 
-            <div className="h-6 bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded">
+            <div className="h-6 bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded cursor-pointer hover:opacity-80 transition-opacity">
               <GiUsaFlag className="  text-white text-center" />
               <a
                 href="/Jeanluiz_CV_ENG_2025.pdf"
                 download="Jeanluiz_CV_ENG_2025.pdf"
-                className="p-4 pl-7 "
+                className="p-4 pl-7 block w-full h-full"
                 title="English Resume"
                 onClick={(e) => {
                   if (
@@ -97,7 +82,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             <a
               href="/Jeanluiz_CV_BRA_2025.pdf"
               download="Jeanluiz_CV_BRA_2025.pdf"
-              className="p-4 pl-6 "
+              className="p-4 pl-6 hover:text-white transition-colors"
             >
               Versão em português
             </a>
@@ -107,7 +92,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
             <a
               href="/Jeanluiz_CV_ENG_2025.pdf"
               download="Jeanluiz_CV_ENG_2025.pdf"
-              className="p-4 pl-6 "
+              className="p-4 pl-6 hover:text-white transition-colors"
             >
               English version
             </a>
@@ -117,7 +102,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         <div className="divider z-[1000]" />
         {isCollapsed ? (
           <div
-            className={`p-4  space-y-4 md:space-y-6 px-7 h-auto transition-all duration-300 ${
+            className={`p-4  space-y-4 md:space-y-6 px-7 h-auto transition-all duration-500 ease-in-out ${
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
@@ -131,10 +116,10 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+                href="https://wa.me/351922009194?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
                 title="Whats App"
               >
-                <WhatsAppIcon />
+                <WhatsAppIcon className="hover:text-white transition-colors" />
               </a>
             </div>
             <div>
@@ -144,7 +129,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                 href="https://github.com/zitchu"
                 title="GitHub"
               >
-                <GitHubIcon />
+                <GitHubIcon className="hover:text-white transition-colors" />
               </a>
             </div>
             <div>
@@ -154,13 +139,13 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                 href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
                 title="Linked-In"
               >
-                <LinkedInIcon />
+                <LinkedInIcon className="hover:text-white transition-colors" />
               </a>
             </div>
           </div>
         ) : (
           <div
-            className={`p-4 space-y-4 md:space-y-6 pl-6 h-auto transition-all duration-300 ${
+            className={`p-4 space-y-4 md:space-y-6 pl-6 h-auto transition-all duration-500 ease-in-out ${
               isCollapsed ? "w-20" : "w-40"
             }`}
           >
@@ -169,7 +154,8 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://wa.me/5561981024948?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+                href="https://wa.me/351922009194?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
+                className="hover:text-white transition-colors"
               >
                 Whats App
               </a>
@@ -180,6 +166,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                 rel="noopener noreferrer"
                 href="https://github.com/zitchu"
                 title="GitHub"
+                className="hover:text-white transition-colors"
               >
                 GitHub
               </a>
@@ -189,6 +176,7 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
+                className="hover:text-white transition-colors"
               >
                 Linked-In
               </a>
@@ -197,11 +185,13 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         )}
 
         <div className="divider z-[1000]" />
+        
+        {/* Share Buttons logic */}
         {isCollapsed ? <CompartilharCol /> : <Compartilhar />}
 
         <button
           onClick={toggleSidebar}
-          className="m-2 p-2 bg-limao text-escuro rounded"
+          className="m-2 p-2 bg-limao text-escuro rounded hover:bg-verde hover:text-white transition-colors"
         >
           {isCollapsed ? "Menu" : "Fechar"}
         </button>
