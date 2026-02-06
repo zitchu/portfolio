@@ -5,12 +5,10 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CompartilharSM from "../projetos/CompartilharSM";
 
 const MobileFooter = () => {
-  const handleDownload = (e, lang) => {
+  const handleDownload = (e) => {
     if (
       !window.confirm(
-        lang === "pt"
-          ? "Você deseja baixar o currículo em português?"
-          : "Do you want to download the resume in English?"
+        "Do you want to download the resume in English?"
       )
     ) {
       e.preventDefault();
@@ -28,24 +26,12 @@ const MobileFooter = () => {
           <div className="py-2">
             <a
               className="hover:bg-[#848c8c] rounded px-2 transition-colors"
-              href="/Jeanluiz_CV_BRA_2025.pdf"
-              download="Jeanluiz_CV_BRA_2025.pdf"
-              title="Currículo em Português"
-              onClick={(e) => handleDownload(e, "pt")}
-            >
-              Baixar em português
-            </a>
-          </div>
-
-          <div className="py-2">
-            <a
-              className="hover:bg-[#848c8c] rounded px-2 transition-colors"
-              href="/Jeanluiz_CV_ENG_2025.pdf"
-              download="Jeanluiz_CV_ENG_2025.pdf"
+              href="/CV_Jeanluiz_2026_ENG.pdf"
+              download="CV_Jeanluiz_2026_ENG.pdf"
               title="English Resume"
-              onClick={(e) => handleDownload(e, "en")}
+              onClick={handleDownload}
             >
-              Download in English
+              Download CV (English 2026)
             </a>
           </div>
         </div>

@@ -1,12 +1,10 @@
-import { useState } from "react";
+import React from "react";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import ContactPageIcon from "@mui/icons-material/ContactPage";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Compartilhar from "../projetos/Compartilhar";
 import CompartilharCol from "../projetos/CompartilharCol";
-import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import { GiUsaFlag, GiBrazilFlag } from "react-icons/gi";
 
 function Sidebar({ isCollapsed, toggleSidebar }) {
   
@@ -25,39 +23,13 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
         <div className="divider z-[1000]" />
 
         {isCollapsed ? (
-          <div className="h-auto flex flex-col space-y-4 md:space-y-6 mb-4">
-            <div
-              title="Download CV"
-              className=" text-center text-white px-7 pt-4"
-            >
-              <FileDownloadIcon className="bg-cinza rounded mb-2" />
-            </div>
-            <div className="h-6 bg-gradient-to-r from-green-700 to-yellow-500 mx-7 p-1 rounded cursor-pointer hover:opacity-80 transition-opacity">
-              <GiBrazilFlag className="  text-white text-center" />
+          <div className="h-auto flex flex-col space-y-4 md:space-y-6 py-4 mb-4 items-center">
+            <div className="w-10 h-10 bg-verde rounded-full flex items-center justify-center hover:opacity-80 transition-opacity">
               <a
-                href="/Jeanluiz_CV_BRA_2025.pdf"
-                download="Jeanluiz_CV_BRA_2025.pdf"
-                className="p-4 pl-7 block w-full h-full"
-                title="Currículo em Português"
-                onClick={(e) => {
-                  if (
-                    !window.confirm(
-                      "Você deseja baixar o currículo em português?"
-                    )
-                  ) {
-                    e.preventDefault();
-                  }
-                }}
-              />
-            </div>
-
-            <div className="h-6 bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded cursor-pointer hover:opacity-80 transition-opacity">
-              <GiUsaFlag className="  text-white text-center" />
-              <a
-                href="/Jeanluiz_CV_ENG_2025.pdf"
-                download="Jeanluiz_CV_ENG_2025.pdf"
-                className="p-4 pl-7 block w-full h-full"
-                title="English Resume"
+                href="/CV_Jeanluiz_2026_ENG.pdf"
+                download="CV_Jeanluiz_2026_ENG.pdf"
+                className="text-white text-xs font-bold"
+                title="Download CV"
                 onClick={(e) => {
                   if (
                     !window.confirm(
@@ -67,34 +39,31 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
                     e.preventDefault();
                   }
                 }}
-              />
+              >
+                CV
+              </a>
             </div>
           </div>
         ) : (
-          <div className="h-auto flex flex-col ">
-            <div className="cursor-default text-md  p-4 pl-6 mont-regular">
+          <div className="h-auto flex flex-col py-2">
+            <div className="cursor-default text-md p-4 pl-6 mont-regular">
               Currículo
             </div>
-            <div className="w-[25%] bg-gradient-to-r  from-green-700 to-yellow-500 mx-7 p-1 rounded">
-              <GiBrazilFlag className=" text-white text-center transform transition-transform duration-300 ease-in-out hover:translate-x-full" />
-            </div>
-
             <a
-              href="/Jeanluiz_CV_BRA_2025.pdf"
-              download="Jeanluiz_CV_BRA_2025.pdf"
+              href="/CV_Jeanluiz_2026_ENG.pdf"
+              download="CV_Jeanluiz_2026_ENG.pdf"
               className="p-4 pl-6 hover:text-white transition-colors"
+              onClick={(e) => {
+                if (
+                  !window.confirm(
+                    "Do you want to download the resume in English?"
+                  )
+                ) {
+                  e.preventDefault();
+                }
+              }}
             >
-              Versão em português
-            </a>
-            <div className="w-[25%] bg-gradient-to-r from-blue-600 to-red-600 mx-7 p-1 rounded">
-              <GiUsaFlag className="  text-white text-center transform transition-transform duration-300 ease-in-out hover:translate-x-full" />
-            </div>
-            <a
-              href="/Jeanluiz_CV_ENG_2025.pdf"
-              download="Jeanluiz_CV_ENG_2025.pdf"
-              className="p-4 pl-6 hover:text-white transition-colors"
-            >
-              English version
+              English CV 2026
             </a>
           </div>
         )}
