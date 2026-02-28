@@ -8,13 +8,9 @@ import harpgladio from "../img/zytverse.png";
 import tavernas from "../img/tavernas.png";
 import zume from "../img/zume.png";
 import parallax from "../img/parallax.png";
-<<<<<<< HEAD
 import paradoxia from "../img/paradoxia.png";
 import cronicas from "../img/cronicas.png";
 import gnoelfo from "../img/gnoelfo.png";
-=======
-import cronicas from "../img/cronicas.png";
->>>>>>> f2f31f0524423db0f5bd870796f504a5c6013071
 import Modalidade from "../modal/Modalidade";
 
 const projetos = [
@@ -89,7 +85,6 @@ const projetos = [
       "Responsivo. Website institucional desenvolvido para uma editora focada em publicações acadêmicas e Open Access. A plataforma prioriza a excelência editorial, abrangendo desde a revisão técnica até a publicação e disseminação global de conhecimento científico.",
   },
   {
-<<<<<<< HEAD
     nome: "Paradoxia Chronicles",
     imagem: paradoxia,
     link: "https://paradoxia-chronicles.vercel.app/",
@@ -101,7 +96,7 @@ const projetos = [
     nome: "Crônicas",
     imagem: cronicas,
     link: "https://cronicasthiago.netlify.app/",
-    importancia: 2,
+    importancia: 1,
     descricao:
       "Responsivo. Um site para um amigo de reunião e cronologia para suas aventuras de RPG.",
   },
@@ -113,15 +108,6 @@ const projetos = [
     descricao:
       "Responsivo. Interface para divulgação de projetos com elemento interativo de taverneiro. Desenvolvido exclusivamente em frontend.",
   },
-=======
-    nome: "Crônicas",
-    imagem: cronicas,
-    link: "https://cronicasthiago.netlify.app/",
-    importancia: 1,
-    descricao:
-      "Responsivo. Um site para um amigo de reunião e cronologia para suas aventuras de RPG.",
-  },
->>>>>>> f2f31f0524423db0f5bd870796f504a5c6013071
 ];
 
 const Projetos = () => {
