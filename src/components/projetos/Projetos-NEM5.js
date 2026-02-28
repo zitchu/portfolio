@@ -8,9 +8,7 @@ import harpgladio from "../img/zytverse.png";
 import tavernas from "../img/tavernas.png";
 import zume from "../img/zume.png";
 import parallax from "../img/parallax.png";
-import paradoxia from "../img/paradoxia.png";
 import cronicas from "../img/cronicas.png";
-import gnoelfo from "../img/gnoelfo.png";
 import Modalidade from "../modal/Modalidade";
 
 const projetos = [
@@ -42,7 +40,7 @@ const projetos = [
     nome: "Parallax",
     imagem: parallax,
     link: "https://jmparallax.netlify.app/",
-    importancia: 1,
+    importancia: 2,
     descricao:
       "Responsivo mas melhor aproveitado em telas maiores. Site feito com parallax em diversas técnicas para exemplificação e 'case' ",
   },
@@ -80,33 +78,17 @@ const projetos = [
     nome: "Editora Zume",
     imagem: zume,
     link: "https://zumeeditora.netlify.app/",
-    importancia: 2,
-    descricao:
-      "Responsivo. Website institucional desenvolvido para uma editora focada em publicações acadêmicas e Open Access. A plataforma prioriza a excelência editorial, abrangendo desde a revisão técnica até a publicação e disseminação global de conhecimento científico.",
-  },
-  {
-    nome: "Paradoxia Chronicles",
-    imagem: paradoxia,
-    link: "https://paradoxia-chronicles.vercel.app/",
     importancia: 1,
     descricao:
-      "Totalmente responsivo. Hub para campanhas de RPG que integra jogadores e mestres. Desenvolvido com TypeScript e SQL (Supabase) no backend para gestão de personagens e mundo.",
+      "Responsivo. Website institucional desenvolvido para uma editora focada em publicações acadêmicas e Open Access. A plataforma prioriza a excelência editorial, abrangendo desde a revisão técnica até a publicação e disseminação global de conhecimento científico.",
   },
   {
     nome: "Crônicas",
     imagem: cronicas,
     link: "https://cronicasthiago.netlify.app/",
-    importancia: 2,
+    importancia: 1,
     descricao:
       "Responsivo. Um site para um amigo de reunião e cronologia para suas aventuras de RPG.",
-  },
-  {
-    nome: "Buteco do Gnoelfo",
-    imagem: gnoelfo,
-    link: "https://gnoelfo.netlify.app/",
-    importancia: 2,
-    descricao:
-      "Responsivo. Interface para divulgação de projetos com elemento interativo de taverneiro. Desenvolvido exclusivamente em frontend.",
   },
 ];
 
