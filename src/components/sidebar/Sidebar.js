@@ -15,42 +15,50 @@ function Sidebar({ isCollapsed, toggleSidebar }) {
       <div
         className={`bg-escuro text-limao transition-all duration-500 ease-in-out ${
           isCollapsed ? "w-20" : "w-40"
-        } flex flex-col justify-center h-full`}
+        } flex flex-col justify-between h-full py-3`}
       >
-        <div className="p-4">
-          <div className="text-center mont-regular">
+        {/* Author Name */}
+        <div className="px-3 py-3">
+          <div className="text-center mont-regular text-sm">
             {isCollapsed ? uiText.sidebar.nameShort : uiText.sidebar.name}
           </div>
         </div>
-        <div className="divider z-[1000]" />
+        <div className="divider" />
 
-        {/* Language Selector */}
+        {/* Language Selector with flags */}
         <div className="flex justify-center items-center py-2 text-xs mont-bold">
-            <button
-              onClick={() => changeLanguage("pt")}
-              className={`px-1 transition-colors ${language === "pt" ? "text-white" : "text-gray-500 hover:text-limao"}`}
-              title="Português"
-            >
-              PT
-            </button>
-            <span className="text-gray-500 mx-1">|</span>
-            <button
-              onClick={() => changeLanguage("en")}
-              className={`px-1 transition-colors ${language === "en" ? "text-white" : "text-gray-500 hover:text-limao"}`}
-              title="English"
-            >
-              EN
-            </button>
-            <span className="text-gray-500 mx-1">|</span>
-            <button
-              onClick={() => changeLanguage("es")}
-              className={`px-1 transition-colors ${language === "es" ? "text-white" : "text-gray-500 hover:text-limao"}`}
-              title="Español"
-            >
-              ES
-            </button>
+          {[{ code: "pt", label: "PT" }, { code: "en", label: "EN" }, { code: "es", label: "ES" }].map((lang, idx, arr) => (
+            <React.Fragment key={lang.code}>
+              <button
+                onClick={() => changeLanguage(lang.code)}
+                title={lang.label}
+                className={`flex flex-col items-center px-1 transition-colors duration-200 ${
+                  language === lang.code ? "text-white" : "text-gray-500 hover:text-limao"
+                }`}
+              >
+                {!isCollapsed && (
+                  lang.code === 'pt' ? (
+                    <div className="lang-flag text-base mb-1 drop-shadow-sm">
+                      <div className="flag-half flag-top"><span className="fi fi-br" /></div>
+                      <div className="flag-half flag-bottom"><span className="fi fi-pt" /></div>
+                    </div>
+                  ) : lang.code === 'en' ? (
+                    <div className="lang-flag text-base mb-1 drop-shadow-sm">
+                      <div className="flag-half flag-top"><span className="fi fi-gb" /></div>
+                      <div className="flag-half flag-bottom"><span className="fi fi-us" /></div>
+                    </div>
+                  ) : (
+                    <span className="fi fi-es text-base mb-1 drop-shadow-sm rounded-sm" />
+                  )
+                )}
+                {/* Text is only smaller if flags are present (isCollapsed=false) */}
+                <span className={`${!isCollapsed ? "text-[9px] mt-0.5" : "text-xs py-1"}`}>{lang.label}</span>
+              </button>
+              {idx < arr.length - 1 && <span className="text-gray-600 mx-0.5">|</span>}
+            </React.Fragment>
+          ))}
         </div>
-        <div className="divider z-[1000]" />
+        <div className="divider" />
 
         {isCollapsed ? (
           <div className="h-auto flex flex-col space-y-4 md:space-y-6 py-4 mb-4 items-center">

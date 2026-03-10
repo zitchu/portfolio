@@ -3,14 +3,13 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import CompartilharSM from "../projetos/CompartilharSM";
+import { useLanguage } from "../../context/LanguageContext";
 
 const MobileFooter = () => {
+  const { uiText } = useLanguage();
+
   const handleDownload = (e) => {
-    if (
-      !window.confirm(
-        "Do you want to download the resume in English?"
-      )
-    ) {
+    if (!window.confirm(uiText.navbar.downloadConfirm)) {
       e.preventDefault();
     }
   };
@@ -20,12 +19,12 @@ const MobileFooter = () => {
       {/* Resume Section */}
       <div className="p-4 flex flex-col justify-center items-center bg-escuro text-white w-full rounded text-limao transition-all duration-300">
         <div className="cursor-default uppercase text-xl text-center mont-regular mb-2">
-          Currículo
+          {uiText.sidebar.resume}
         </div>
         <div className="flex flex-nowrap w-full justify-around items-center">
           <div className="py-2">
             <a
-              className="hover:bg-[#848c8c] rounded px-2 transition-colors"
+              className="hover:bg-white/20 rounded px-2 transition-colors duration-200"
               href="/CV_Jeanluiz_2026_ENG.pdf"
               download="CV_Jeanluiz_2026_ENG.pdf"
               title="English Resume"
@@ -40,38 +39,38 @@ const MobileFooter = () => {
       {/* Contacts Section */}
       <div className="p-4 flex flex-col justify-center items-center bg-escuro text-white w-full rounded text-limao transition-all duration-300">
         <div className="cursor-default uppercase text-xl text-center mont-regular mb-2">
-          Contatos
+          {uiText.sidebar.contacts}
         </div>
         <div className="flex flex-nowrap w-full justify-around items-center">
           <div className="py-2">
             <a
-              className="hover:bg-[#848c8c] rounded px-2 transition-colors flex items-center gap-1"
+              className="hover:bg-white/20 rounded px-2 transition-colors duration-200 flex items-center gap-1"
               target="_blank"
               rel="noopener noreferrer"
               href="https://wa.me/351922009194?text=Olá,%20vi%20seu%20portfólio%20e%20entrei%20em%20contato!"
             >
-              <WhatsAppIcon fontSize="small" /> WhatsApp
+              <WhatsAppIcon fontSize="small" /> {uiText.sidebar.whatsapp}
             </a>
           </div>
           <div className="py-2">
             <a
-              className="hover:bg-[#848c8c] rounded px-2 transition-colors flex items-center gap-1"
+              className="hover:bg-white/20 rounded px-2 transition-colors duration-200 flex items-center gap-1"
               target="_blank"
               rel="noopener noreferrer"
               href="https://github.com/zitchu"
               title="GitHub"
             >
-              <GitHubIcon fontSize="small" /> GitHub
+              <GitHubIcon fontSize="small" /> {uiText.sidebar.github}
             </a>
           </div>
           <div className="py-2">
             <a
-              className="hover:bg-[#848c8c] rounded px-2 transition-colors flex items-center gap-1"
+              className="hover:bg-white/20 rounded px-2 transition-colors duration-200 flex items-center gap-1"
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.linkedin.com/in/jeanluiz-ferreira-porto-monteiro-a19185105/"
+              href="https://www.linkedin.com/in/jeanluiz-monteiro/"
             >
-              <LinkedInIcon fontSize="small" /> Linked-In
+              <LinkedInIcon fontSize="small" /> {uiText.sidebar.linkedin}
             </a>
           </div>
         </div>

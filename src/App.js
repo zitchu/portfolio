@@ -7,7 +7,7 @@ import MobileNavbar from "./components/navbar/MobileNavbar";
 import { LanguageProvider } from "./context/LanguageContext";
 
 function App() {
-  const [isCollapsed, setIsCollapsed] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState(false);
 
   const toggleSidebar = () => {
     setIsCollapsed(!isCollapsed);

@@ -16,11 +16,16 @@ const translations = {
       home: "Home",
       projects: "Projetos",
       contact: "Contato",
+      share: "Compartilhe",
+      resume: "Currículo",
       downloadConfirm: "Você deseja baixar o currículo em inglês?",
     },
     projects: {
       title: "Projetos Jeanluiz",
       visit: "Visitar Projeto",
+    },
+    share: {
+      title: "Compartilhe",
     },
   },
   en: {
@@ -40,11 +45,16 @@ const translations = {
       home: "Home",
       projects: "Projects",
       contact: "Contact",
+      share: "Share",
+      resume: "Resume",
       downloadConfirm: "Do you want to download the resume in English?",
     },
     projects: {
       title: "Jeanluiz's Projects",
       visit: "Visit Project",
+    },
+    share: {
+      title: "Share",
     },
   },
   es: {
@@ -64,11 +74,16 @@ const translations = {
       home: "Inicio",
       projects: "Proyectos",
       contact: "Contacto",
+      share: "Comparte",
+      resume: "Currículum",
       downloadConfirm: "¿Deseas descargar el currículum en inglés?",
     },
     projects: {
       title: "Proyectos de Jeanluiz",
       visit: "Visitar Proyecto",
+    },
+    share: {
+      title: "Comparte",
     },
   },
 };
