@@ -106,7 +106,7 @@ const projetos = [
   {
     nome: "Editora Zume",
     imagem: zume,
-    link: "https://zumeeditora.netlify.app/",
+    link: "https://core-site-builder-orcin.vercel.app/",
     importancia: 1,
     descricao: {
       pt: "Responsivo. Website institucional desenvolvido para uma editora focada em publicações acadêmicas e Open Access. A plataforma prioriza a excelência editorial, abrangendo desde a revisão técnica até a publicação e disseminação global de conhecimento científico.",
